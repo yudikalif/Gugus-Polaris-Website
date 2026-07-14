@@ -345,7 +345,13 @@ footer {
   color: var(--white-dim);
   font-style: italic;
 }
-
+.mentor-card a:hover {
+  color: #ffd76a;
+  text-shadow:
+    0 0 4px rgba(255, 215, 106, 0.8),
+    0 0 8px rgba(255, 215, 106, 0.6),
+    0 0 12px rgba(255, 215, 106, 0.4);
+}
 .mentor-label {
   text-align: center;
   font-size: 1.9rem;
