@@ -14,22 +14,50 @@
   }
 })();
 
-// Build seamless infinite marquee (duplicate list exactly once -> translateX(-50%))
-const members = [
-  { name: "Firman Wahyudi", handle: "@yukade" },
-  { name: "M. Qais Humaidy", handle: "@qaaizzz_" },
-  { name: "Naano Milky", handle: "@naanomilkyy" },
-  { name: "April Lynn Widuri", handle: "@aprllynwdr" },
-  { name: "Rina Yauma", handle: "@rn_yauma" },
-  { name: "Bintang Polaris", handle: "@bintangpolaris" },
-];
 
+const members = [
+  {
+    name: "Firman Wahyudi",
+    handle: "@yukade",
+    ig: "https://www.instagram.com/yukade_/",
+  },
+  { name: "Muhammad Rafasya Alfarizqi", handle: "@example", ig: "" },
+  { name: "Zilmi Gaiza Ribki", handle: "@example", ig: "" },
+  { name: "Khalid Rachman Asyakir", handle: "@example", ig: "" },
+  { name: "Lalu Qoriul Hafiz", handle: "@example", ig: "" },
+  { name: "Muhammad Danial Khoirul Ahzam", handle: "@example", ig: "" },
+  { name: "Thoriq Andistyo Sya Bani", handle: "@example", ig: "" },
+  { name: "Laudy Irnawan", handle: "@example", ig: "" },
+  { name: "Sholiha Tsaltsa Putri", handle: "@example", ig: "" },
+  { name: "Alisa Qistina Silva", handle: "@example", ig: "" },
+  { name: "Siti Rahma Salsabila", handle: "@example", ig: "" },
+  {
+    name: "Aulia Arianti Ramdani",
+    handle: "@ya.4y4",
+    ig: "https://www.instagram.com/ya.4y4/",
+  },
+  { name: "Mazaya Raziqyah Afdal", handle: "@example", ig: "" },
+  { name: "Harumi Ramadhani", handle: "@example", ig: "" },
+  { name: "Yasmin Attiroh", handle: "@example", ig: "" },
+  { name: "Hasna Huwaida Arifa Putri", handle: "@example", ig: "" },
+];
 const track = document.getElementById("marqueeTrack");
 const repeats = 4;
 let html = "";
 for (let r = 0; r < repeats; r++) {
   members.forEach((m) => {
-    html += `<span class="pill"><span class="pill-name">${m.name}</span><br><span class="pill-handle">${m.handle}</span></span>`;
+    members.forEach((m) => {
+  html += `
+    <span class="pill">
+      <span class="pill-name">${m.name}</span><br>
+      ${
+        m.ig
+          ? `<a href="${m.ig}" target="_blank" class="pill-handle">${m.handle}</a>`
+          : `<span class="pill-handle">${m.handle}</span>`
+      }
+    </span>
+  `;
+});
   });
 }
 track.innerHTML = html + html;
