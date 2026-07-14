@@ -345,7 +345,7 @@ footer {
   color: var(--white-dim);
   font-style: italic;
 }
-.mentor-card a:hover {
+.mentor-card .handle:hover {
   color: #ffd76a;
   text-shadow:
     0 0 4px rgba(255, 215, 106, 0.8),

@@ -25,7 +25,11 @@ const members = [
   { name: "Khalid Rachman Asyakir", handle: "", ig: "" },
   { name: "Lalu Qoriul Hafiz", handle: "", ig: "" },
   { name: "Muhammad Danial Khoirul Ahzam", handle: "", ig: "" },
-  { name: "Thoriq Andistyo Sya Bani", handle: "", ig: "" },
+  {
+    name: "Thoriq Andistyo Sya Bani",
+    handle: "@titoarzz",
+    ig: "https://www.instagram.com/titoarzz/",
+  },
   { name: "Laudy Irnawan", handle: "", ig: "" },
   { name: "Sholiha Tsaltsa Putri", handle: "", ig: "" },
   { name: "Alisa Qistina Silva", handle: "", ig: "" },
@@ -37,7 +41,11 @@ const members = [
   },
   { name: "Mazaya Raziqyah Afdal", handle: "", ig: "" },
   { name: "Harumi Ramadhani", handle: "", ig: "" },
-  { name: "Yasmin Attiroh", handle: "", ig: "" },
+  {
+    name: "Yasmin Attiroh",
+    handle: "@me_mey.24",
+    ig: "https://www.instagram.com/me_mey.24/",
+  },
   { name: "Hasna Huwaida Arifa Putri", handle: "", ig: "" },
 ];
 const track = document.getElementById("marqueeTrack");
@@ -56,47 +64,50 @@ for (let r = 0; r < repeats; r++) {
     </span>
   `;
   });
+}
+track.innerHTML = html;
 
-  track.innerHTML = html;
+(function () {
+  const video = document.getElementById("pentasVideo");
+  const playBtn = document.getElementById("playPause");
+  const skipBack = document.getElementById("skipBack");
+  const skipForward = document.getElementById("skipForward");
+  const fsBtn = document.getElementById("fullscreenBtn");
 
-  (function () {
-    const video = document.getElementById("pentasVideo");
-    const playBtn = document.getElementById("playPause");
-    const skipBack = document.getElementById("skipBack");
-    const skipForward = document.getElementById("skipForward");
-    const fsBtn = document.getElementById("fullscreenBtn");
-
-    playBtn.addEventListener("click", () => {
+  playBtn.addEventListener("click", async () => {
+    try {
       if (video.paused) {
-        video.play();
+        await video.play();
         playBtn.textContent = "⏸";
       } else {
         video.pause();
         playBtn.textContent = "▶";
       }
-    });
+    } catch (err) {
+      console.error(err);
+    }
+  });
 
-    skipBack.addEventListener("click", () => {
-      video.currentTime = Math.max(0, video.currentTime - 10);
-    });
+  skipBack.addEventListener("click", () => {
+    video.currentTime = Math.max(0, video.currentTime - 10);
+  });
 
-    skipForward.addEventListener("click", () => {
-      video.currentTime = Math.min(
-        video.duration || Infinity,
-        video.currentTime + 10,
-      );
-    });
+  skipForward.addEventListener("click", () => {
+    video.currentTime = Math.min(
+      video.duration || Infinity,
+      video.currentTime + 10,
+    );
+  });
 
-    fsBtn.addEventListener("click", () => {
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-      } // Safari
-    });
+  fsBtn.addEventListener("click", () => {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } // Safari
+  });
 
-    video.addEventListener("ended", () => {
-      playBtn.textContent = "▶";
-    });
-  })();
-}
+  video.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
+})();
