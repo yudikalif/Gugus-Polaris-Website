@@ -41,7 +41,7 @@ const members = [
   { name: "Hasna Huwaida Arifa Putri", handle: "", ig: "" },
 ];
 const track = document.getElementById("marqueeTrack");
-const repeats = 1;
+const repeats = 2;
 let html = "";
 for (let r = 0; r < repeats; r++) {
   members.forEach((m) => {
