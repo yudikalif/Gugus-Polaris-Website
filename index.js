@@ -14,7 +14,6 @@
   }
 })();
 
-
 const members = [
   {
     name: "Firman Wahyudi",
@@ -42,22 +41,57 @@ const members = [
   { name: "Hasna Huwaida Arifa Putri", handle: "@example", ig: "" },
 ];
 const track = document.getElementById("marqueeTrack");
-const repeats = 1;
+const repeats = 0.2;
 let html = "";
 for (let r = 0; r < repeats; r++) {
   members.forEach((m) => {
-    members.forEach((m) => {
-  html += `
-    <span class="pill">
-      <span class="pill-name">${m.name}</span><br>
-      ${
-        m.ig
-          ? `<a href="${m.ig}" target="_blank" class="pill-handle">${m.handle}</a>`
-          : `<span class="pill-handle">${m.handle}</span>`
-      }
-    </span>
-  `;
-});
+    html += `<span class="pill">
+  <span class="pill-name">${m.name}</span><br>
+  <a href="${m.ig}" target="_blank">
+    <span class="pill-handle">${m.handle}</span>
+  </a>
+</span>`;
   });
 }
 track.innerHTML = html + html;
+
+(function () {
+  const video = document.getElementById("pentasVideo");
+  const playBtn = document.getElementById("playPause");
+  const skipBack = document.getElementById("skipBack");
+  const skipForward = document.getElementById("skipForward");
+  const fsBtn = document.getElementById("fullscreenBtn");
+
+  playBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      playBtn.textContent = "⏸";
+    } else {
+      video.pause();
+      playBtn.textContent = "▶";
+    }
+  });
+
+  skipBack.addEventListener("click", () => {
+    video.currentTime = Math.max(0, video.currentTime - 10);
+  });
+
+  skipForward.addEventListener("click", () => {
+    video.currentTime = Math.min(
+      video.duration || Infinity,
+      video.currentTime + 10,
+    );
+  });
+
+  fsBtn.addEventListener("click", () => {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } // Safari
+  });
+
+  video.addEventListener("ended", () => {
+    playBtn.textContent = "▶";
+  });
+})();
