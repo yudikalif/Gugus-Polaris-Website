@@ -40,7 +40,11 @@ const members = [
     ig: "https://www.instagram.com/ya.4y4/",
   },
   { name: "Mazaya Raziqyah Afdal", handle: "", ig: "" },
-  { name: "Harumi Ramadhani", handle: "", ig: "" },
+  {
+    name: "Harumi Ramadhani",
+    handle: "_harumirmdhni",
+    ig: "https://www.instagram.com/_harumirmdhni/",
+  },
   {
     name: "Yasmin Attiroh",
     handle: "@me_mey.24",
