@@ -37,7 +37,11 @@ const members = [
     handle: "@alisa_qist",
     ig: "https://www.instagram.com/alisa_qist/",
   },
-  { name: "Siti Rahma Salsabila", handle: "", ig: "" },
+  {
+    name: "Siti Rahma Salsabila",
+    handle: "@c.chacey",
+    ig: "https://www.instagram.com/c.chacey/",
+  },
   {
     name: "Aulia Arianti Ramdani",
     handle: "@ya.4y4",
@@ -46,7 +50,7 @@ const members = [
   { name: "Mazaya Raziqyah Afdal", handle: "", ig: "" },
   {
     name: "Harumi Ramadhani",
-    handle: "_harumirmdhni",
+    handle: "@_harumirmdhni",
     ig: "https://www.instagram.com/_harumirmdhni/",
   },
   {
@@ -54,7 +58,11 @@ const members = [
     handle: "@me_mey.24",
     ig: "https://www.instagram.com/me_mey.24/",
   },
-  { name: "Hasna Huwaida Arifa Putri", handle: "", ig: "" },
+  {
+    name: "Hasna Huwaida Arifa Putri",
+    handle: "@haasna.ar_",
+    ig: "https://www.instagram.com/haasna.ar_/",
+  },
 ];
 const track = document.getElementById("marqueeTrack");
 const repeats = 2;
