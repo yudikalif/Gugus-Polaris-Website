@@ -17,7 +17,7 @@
 const members = [
   {
     name: "Firman Wahyudi",
-    handle: "@yukade",
+    handle: "@yukade_",
     ig: "https://www.instagram.com/yukade_/",
   },
   { name: "Muhammad Rafasya Alfarizqi", handle: "", ig: "" },
