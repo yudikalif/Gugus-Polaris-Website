@@ -22,7 +22,7 @@ const members = [
   },
   {
     name: "Muhammad Rafasya Alfarizqi", 
-   handle: "rfasayaa", 
+   handle: "@rfasayaa", 
    ig: "https://www.instagram.com/rfasayaa/" 
   },
   { name: "Zilmi Gaiza Ribki", handle: "", ig: "" },
