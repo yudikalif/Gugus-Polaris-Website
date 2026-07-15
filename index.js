@@ -32,7 +32,11 @@ const members = [
   },
   { name: "Laudy Irnawan", handle: "", ig: "" },
   { name: "Sholiha Tsaltsa Putri", handle: "", ig: "" },
-  { name: "Alisa Qistina Silva", handle: "", ig: "" },
+  {
+    name: "Alisa Qistina Silva",
+    handle: "alisa_qist",
+    ig: "https://www.instagram.com/alisa_qist/",
+  },
   { name: "Siti Rahma Salsabila", handle: "", ig: "" },
   {
     name: "Aulia Arianti Ramdani",
