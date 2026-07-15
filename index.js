@@ -21,9 +21,9 @@ const members = [
     ig: "https://www.instagram.com/yukade_/",
   },
   {
-    name: "Muhammad Rafasya Alfarizqi", 
-   handle: "@rfasayaa", 
-   ig: "https://www.instagram.com/rfasayaa/" 
+    name: "Muhammad Rafasya Alfarizqi",
+    handle: "@rfasayaa",
+    ig: "https://www.instagram.com/rfasayaa/",
   },
   { name: "Zilmi Gaiza Ribki", handle: "", ig: "" },
   { name: "Khalid Rachman Asyakir", handle: "", ig: "" },
@@ -86,48 +86,3 @@ for (let r = 0; r < repeats; r++) {
   });
 }
 track.innerHTML = html;
-
-(function () {
-  const video = document.getElementById("pentasVideo");
-  const playBtn = document.getElementById("playPause");
-  const skipBack = document.getElementById("skipBack");
-  const skipForward = document.getElementById("skipForward");
-  const fsBtn = document.getElementById("fullscreenBtn");
-
-  playBtn.addEventListener("click", async () => {
-    try {
-      if (video.paused) {
-        await video.play();
-        playBtn.textContent = "⏸";
-      } else {
-        video.pause();
-        playBtn.textContent = "▶";
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  });
-
-  skipBack.addEventListener("click", () => {
-    video.currentTime = Math.max(0, video.currentTime - 10);
-  });
-
-  skipForward.addEventListener("click", () => {
-    video.currentTime = Math.min(
-      video.duration || Infinity,
-      video.currentTime + 10,
-    );
-  });
-
-  fsBtn.addEventListener("click", () => {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.webkitRequestFullscreen) {
-      video.webkitRequestFullscreen();
-    } // Safari
-  });
-
-  video.addEventListener("ended", () => {
-    playBtn.textContent = "▶";
-  });
-})();
