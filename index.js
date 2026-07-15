@@ -34,7 +34,7 @@ const members = [
   { name: "Sholiha Tsaltsa Putri", handle: "", ig: "" },
   {
     name: "Alisa Qistina Silva",
-    handle: "alisa_qist",
+    handle: "@alisa_qist",
     ig: "https://www.instagram.com/alisa_qist/",
   },
   { name: "Siti Rahma Salsabila", handle: "", ig: "" },
