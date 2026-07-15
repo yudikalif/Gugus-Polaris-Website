@@ -20,7 +20,11 @@ const members = [
     handle: "@yukade_",
     ig: "https://www.instagram.com/yukade_/",
   },
-  { name: "Muhammad Rafasya Alfarizqi", handle: "", ig: "" },
+  {
+    name: "Muhammad Rafasya Alfarizqi", 
+   handle: "rfasayaa", 
+   ig: "https://www.instagram.com/rfasayaa/" 
+  },
   { name: "Zilmi Gaiza Ribki", handle: "", ig: "" },
   { name: "Khalid Rachman Asyakir", handle: "", ig: "" },
   { name: "Lalu Qoriul Hafiz", handle: "", ig: "" },
